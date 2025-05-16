@@ -2,6 +2,13 @@
 
 All notable changes to `laravel-role-init` will be documented in this file.
 
+## v0.1.0 - 2025-05-16
+
+Added the Result value object to the toolkit.
+Result provides a standardized way to represent the outcome of operations, encapsulating success, error, failure (with exception), messages, data, and optional exceptions.
+Includes factory methods: Result::success(), Result::error(), and Result::failure().
+Provides clear API for checking the result state: isSuccess(), isError(), isFailure(), as well as getters for message, data, and throwable.
+
 ## Fix user model retrieval in ConfigService to handle missing configuration - 2025-03-09
 
 ### What's Changed
