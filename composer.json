@@ -1,0 +1,72 @@
+{
+  "name": "oltrematica/laravel-toolkit",
+  "description": "Laravel Toolkit is a collection of reusable utilities, helpers, and value objects for Laravel projects, designed to standardize and simplify development at Oltrematica ",
+  "type": "library",
+  "keywords": [
+    "oltrematica",
+    "toolkit",
+    "laravel",
+    "utilities"
+  ],
+  "require": {
+    "php": "^8.3",
+    "illuminate/contracts": "^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "driftingly/rector-laravel": "^2.0",
+    "larastan/larastan": "^3.1",
+    "laravel/pint": "^1.22",
+    "nunomaduro/collision": "^8.8",
+    "orchestra/testbench": "^10.3",
+    "pestphp/pest": "^3.8",
+    "pestphp/pest-plugin-arch": "^3.1",
+    "pestphp/pest-plugin-laravel": "^3.2",
+    "phpstan/phpstan-deprecation-rules": "^2.0",
+    "phpstan/phpstan-mockery": "^2.0",
+    "phpstan/phpstan-phpunit": "^2.0",
+    "rector/rector": "^2.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Oltrematica\\Toolkit\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Oltrematica\\Toolkit\\Tests\\": "tests/",
+      "Workbench\\App\\": "workbench/app/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Oltrematica\\Toolkit\\ToolkitServiceProvider"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "Mircha Emanuel D'Angelo",
+      "email": "m.dangelo@oltrematica.it",
+      "role": "Maintainer"
+    }
+  ],
+  "scripts": {
+    "post-autoload-dump": "@composer run prepare",
+    "prepare": "@php vendor/bin/testbench package:discover --ansi",
+    "analyse": "vendor/bin/phpstan analyse --memory-limit=2G",
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --parallel --coverage",
+    "format": "vendor/bin/pint",
+    "refactor": "vendor/bin/rector"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
