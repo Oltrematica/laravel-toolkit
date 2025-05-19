@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-role-init` will be documented in this file.
 
+## v0.1.1 - 2025-05-19
+
+**Full Changelog**: https://github.com/Oltrematica/laravel-toolkit/compare/v0.1.0...v0.1.1
+
+- InvalidConfigurationException class
+
 ## v0.1.0 - 2025-05-16
 
 Added the Result value object to the toolkit.
