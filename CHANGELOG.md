@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `laravel-role-init` will be documented in this file.
+All notable changes to `laravel-tooklkit` will be documented in this file.
 
 ## v0.1.1 - 2025-05-19
 
