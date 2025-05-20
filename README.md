@@ -99,6 +99,23 @@ if ($result->isFailure()) {
 | getData()           | Returns the attached data                                     |
 | getThrowable()      | Returns the exception, if any                                 |
 
+## ResponseStatus Enum
+
+The `ResponseStatus` enum defines a standard set of response statuses to represent the outcome of operations.
+
+```php
+use Oltrematica\Toolkit\Enums\ResponseStatus;
+
+$status = ResponseStatus::SUCCESS;
+
+if ($status->isSuccess()) {
+    // Handle success
+} elseif ($status->isError()) {
+    // Handle error
+} elseif ($status->isFailure()) {
+    // Handle failure
+}
+```
 
 ## Code Quality
 
@@ -140,9 +157,4 @@ composer test
 
 Feel free to contribute to this package by submitting issues or pull requests. We welcome any improvements or bug fixes
 you may have.
-
-
-
-
-
 
